@@ -1,4 +1,4 @@
-public class Administrador extends Marketplace {
+public class Administrador extends Usuario {
     String usuario;
     String contraseña;
 }

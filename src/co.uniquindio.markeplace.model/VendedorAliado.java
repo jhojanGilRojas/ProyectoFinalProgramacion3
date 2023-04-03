@@ -1,2 +1,2 @@
-public class VendedorAliado {
+public class VendedorAliado extends Vendedor{
 }

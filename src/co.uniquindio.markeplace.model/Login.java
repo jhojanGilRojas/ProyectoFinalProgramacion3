@@ -1,2 +1,2 @@
-public abstract class Login implements Usuario {
+public abstract class Login extends Usuario {
 }

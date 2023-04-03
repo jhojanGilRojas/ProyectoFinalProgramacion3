@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Vendedor extends Marketplace{
+public class Vendedor extends Empleado{
     String nombre;
     String apellido;
     String cedula;
