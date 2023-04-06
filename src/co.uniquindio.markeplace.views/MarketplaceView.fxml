@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MarketplaceView">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="937.0">
+         <children>
+            <TabPane layoutX="11.0" layoutY="7.0" prefHeight="754.0" prefWidth="897.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Administrador">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="898.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" layoutX="6.0" layoutY="4.0" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="13.0" layoutY="133.0" text="Identificacion:" />
+                                          <Label layoutX="14.0" layoutY="84.0" text="Nombre:" />
+                                          <Label layoutX="614.0" layoutY="134.0" text="Telefono:" />
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle Vendedor" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TextField fx:id="textIdentificacionVendedor" layoutX="108.0" layoutY="128.0" prefHeight="26.0" prefWidth="158.0" />
+                                          <TextField fx:id="textNombreVendedor" layoutX="108.0" layoutY="79.0" prefHeight="26.0" prefWidth="158.0" />
+                                          <TextField fx:id="textTelefonoVendedor" layoutX="709.0" layoutY="129.0" prefHeight="26.0" prefWidth="158.0" />
+                                          <Button fx:id="btnNuevoVendedor" layoutX="148.0" layoutY="233.0" mnemonicParsing="false" onAction="#OnbtnNuevoVendedor" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarCliente" layoutX="363.0" layoutY="233.0" mnemonicParsing="false" onAction="#OnbtnAgregarVendedor" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarVendedor" layoutX="555.0" layoutY="233.0" mnemonicParsing="false" onAction="#OnbtnActualizarVendedor" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="303.0" layoutY="133.0" text="Direccion:" />
+                                          <Label layoutX="614.0" layoutY="84.0" text="Genero:" />
+                                          <Label layoutX="13.0" layoutY="184.0" text="correo:" />
+                                          <TextField fx:id="textDireccionVendedor" layoutX="397.0" layoutY="130.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <TextField fx:id="textCorreoVendedor" layoutX="108.0" layoutY="180.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <Label layoutX="303.0" layoutY="85.0" text="Apellido:" />
+                                          <TextField fx:id="textApellidoVendedor" layoutX="397.0" layoutY="80.0" prefHeight="26.0" prefWidth="158.0" />
+                                          <Label layoutX="303.0" layoutY="184.0" text="contraseña:" />
+                                          <TextField fx:id="textContrasenaVendedor" layoutX="398.0" layoutY="180.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <ComboBox fx:id="textGeneroVendedor" layoutX="709.0" layoutY="81.0" prefHeight="25.0" prefWidth="157.0" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de Vendedores" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableVendedores" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                            <columns>
+                                              <TableColumn fx:id="columnNombre" prefWidth="136.00006103515625" text="Nombre" />
+                                                <TableColumn fx:id="columnApellido" prefWidth="75.0" text="Apellido" />
+                                                <TableColumn fx:id="Genero" prefWidth="115.99999332427979" text="Genero" />
+                                              <TableColumn fx:id="columnIdentificacion" prefWidth="115.99999332427979" text="Identificacion" />
+                                                <TableColumn fx:id="columnDireccion" prefWidth="125.60003662109375" text="Direccion" />
+                                                <TableColumn fx:id="columnTelefono" prefWidth="129.5999755859375" text="Telefono" />
+                                            </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarVendedor" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#OnbtnEliminarVendedor" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                          <AmbientLight color="CHARTREUSE" lightOn="true" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Muro">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane layoutX="8.0" layoutY="7.0" orientation="VERTICAL" prefHeight="704.0" prefWidth="887.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="32.0" layoutY="14.0" text="Información de la venta" />
+                                          <Separator layoutX="19.0" layoutY="30.0" prefHeight="3.0" prefWidth="847.0" />
+                                          <TableView fx:id="tableSedeVenta" layoutX="19.0" layoutY="61.0" prefHeight="167.0" prefWidth="623.0">
+                                            <columns>
+                                              <TableColumn fx:id="columnNombreVenta" prefWidth="113.0" text="Nombre" />
+                                              <TableColumn fx:id="columnProductoVenta" prefWidth="128.0" text="Producto" />
+                                                <TableColumn fx:id="columnTipoProductoVenta" prefWidth="122.0" text="Tipo Producto" />
+                                                <TableColumn fx:id="columnPrecioVenta" prefWidth="122.0" text="Precio" />
+                                            </columns>
+                                          </TableView>
+                                          <ComboBox fx:id="ComboBoxListVendedores" layoutX="671.0" layoutY="149.0" onAction="#ComboBoxListVendedores" prefWidth="150.0" />
+                                          <Label layoutX="733.0" layoutY="116.0" text="Vendedor" />
+                                          <Button fx:id="buttonEliminarVenta" layoutX="716.0" layoutY="586.0" mnemonicParsing="false" onAction="#btnEliminarVentaEvent" text="Eliminar" />
+                                          <Button fx:id="buttonActualizarVenta" layoutX="716.0" layoutY="500.0" mnemonicParsing="false" onAction="#btnActualizarVentaEvent" text="Actualizar" />
+                                          <Button fx:id="buttonRealizarVenta" layoutX="397.0" layoutY="333.0" mnemonicParsing="false" onAction="#btnRealizarVentaEvent" text="Realizar Venta" />
+                                          <TableView fx:id="tableListVentas" layoutX="19.0" layoutY="476.0" prefHeight="167.0" prefWidth="623.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnIdentificacionVenta" prefWidth="100.0" text="Identificación" />
+                                                <TableColumn fx:id="columnVentas1" prefWidth="115.0" text="Venta" />
+                                                <TableColumn fx:id="columnCantidadVenta1" prefWidth="101.0" text="Cantidad" />
+                                                <TableColumn fx:id="columnClienteVenta1" prefWidth="98.0" text="Vendedor" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="32.0" layoutY="255.0" text="Información venta" />
+                                          <Separator layoutX="19.0" layoutY="271.0" prefHeight="3.0" prefWidth="847.0" />
+                                          <Label layoutX="32.0" layoutY="445.0" text="Lista de ventas" />
+                                          <Separator layoutX="19.0" layoutY="465.0" prefHeight="3.0" prefWidth="847.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Estadisticas">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="-2.0" layoutY="-2.0" prefHeight="714.0" prefWidth="897.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.33709449929478136" layoutX="2.0" layoutY="2.0" orientation="VERTICAL" prefHeight="711.0" prefWidth="897.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="250.0" prefWidth="895.0">
+                                             <children>
+                                                <TableView fx:id="tableVendedor_Mas_Ventas" layoutX="14.0" layoutY="47.0" prefHeight="170.0" prefWidth="624.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="columnNombreEstadisticas" prefWidth="138.0" text="Nombre" />
+                                                      <TableColumn fx:id="columnApellidoEstadisticas" prefWidth="163.0" text="Apellido" />
+                                                      <TableColumn fx:id="columnIdEstadisticas" prefWidth="175.0" text="Identificación" />
+                                                      <TableColumn fx:id="columnCantVentasEstadisticas" prefWidth="163.0" text="Cantidad Ventas" />
+                                                   </columns>
+                                                </TableView>
+                                                <Label layoutX="29.0" layoutY="6.0" text="Vendedor con más ventas" />
+                                                <Separator layoutX="15.0" layoutY="21.0" prefHeight="7.0" prefWidth="873.0" />
+                                                <Button fx:id="buttonBuscarRango1" layoutX="726.0" layoutY="95.0" mnemonicParsing="false" onAction="#actionBuscar_Por_Genero" text="Buscar por Genero" />
+                                                <Button fx:id="buttonBuscarCodigo" layoutX="723.0" layoutY="180.0" mnemonicParsing="false" onAction="#actionBuscar_Por_Id" text="Buscar por identificación" />
+                                                <Label layoutX="646.0" layoutY="141.0" text="Identificación" />
+                                                <Label layoutX="662.0" layoutY="63.0" text="Genero" />
+                                                <TextField fx:id="textId" layoutX="723.0" layoutY="137.0" />
+                                                <TextField fx:id="textGenero" layoutX="723.0" layoutY="59.0" />
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <TableView fx:id="tableMayorVenta" layoutX="15.0" layoutY="66.0" prefHeight="145.0" prefWidth="623.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="columnIdentificacionListAdministrativo" prefWidth="129.0" text="Identificación" />
+                                                      <TableColumn fx:id="columnNombrelistAdministrativos" prefWidth="163.0" text="Nombre" />
+                                                      <TableColumn fx:id="columnCantidadListAdministrativos" prefWidth="166.0" text="Cantidad" />
+                                                      <TableColumn fx:id="columnPrecioAdministrativo2" prefWidth="163.0" text="Precio" />
+                                                   </columns>
+                                                </TableView>
+                                                <TableView fx:id="tableProductosDisponibles" layoutX="14.0" layoutY="269.0" prefHeight="163.0" prefWidth="624.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="columnCodigoListAdministrativos" prefWidth="205.0" text="Nombre" />
+                                                      <TableColumn fx:id="columnProductosDisponibles" prefWidth="212.0" text="Producto" />
+                                                      <TableColumn fx:id="columnDisponibilidad" prefWidth="206.0" text="Disponibilidad" />
+                                                   </columns>
+                                                </TableView>
+                                                <Label layoutX="14.0" layoutY="24.0" text="Empleado con mayor venta" />
+                                                <Label layoutX="14.0" layoutY="240.0" text="Productos disponibles" />
+                                                <Separator layoutX="14.0" layoutY="38.0" prefHeight="7.0" prefWidth="873.0" />
+                                                <Separator layoutX="14.0" layoutY="254.0" prefHeight="7.0" prefWidth="873.0" />
+                                                <TextField fx:id="textRango2" layoutX="732.0" layoutY="76.0" />
+                                                <Label layoutX="663.0" layoutY="80.0" text="Rango" />
+                                                <Button fx:id="buttonBuscarRango2" layoutX="732.0" layoutY="114.0" mnemonicParsing="false" onAction="#actionBuscar_Por_Rango2" text="Buscar por rango" />
+                                                <ComboBox fx:id="ComboBoxSedeAdministrativo" layoutX="732.0" layoutY="277.0" onAction="#ComboBoxSedeAdministrativos" prefWidth="150.0" />
+                                                <Label layoutX="663.0" layoutY="281.0" text="Sede" />
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab text="Vendedor1">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto1" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto1" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto1" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo1" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto1" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto1" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede1" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Vendedor2">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto1" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto11" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto11" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto11" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto1" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto1" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo2" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos1" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo11" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto11" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto11" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede11" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto1" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor3">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto11" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto111" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto111" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto111" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto11" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto11" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo21" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos11" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo111" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto111" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto111" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede111" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto11" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor4">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto12" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto112" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto112" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto112" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto12" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto12" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo22" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos12" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo112" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto112" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto112" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede112" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto12" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor5">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto13" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto113" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto113" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto113" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto13" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto13" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo23" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos13" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo113" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto113" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto113" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede113" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto13" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor6">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto14" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto114" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto114" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto114" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto14" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto14" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo24" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos14" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo114" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto114" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto114" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede114" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto14" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor7">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto15" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto115" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto115" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto115" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto15" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto15" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo25" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos15" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo115" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto115" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto115" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede115" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto15" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor8">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto16" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto116" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto116" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto116" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto16" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto16" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo26" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos16" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo116" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto116" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto116" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede116" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto16" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor9">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto17" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto117" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto117" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto117" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto17" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto17" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo27" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos17" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo117" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto117" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto117" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede117" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto17" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Vendedor10">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4762055837563451" orientation="VERTICAL" prefHeight="694.0" prefWidth="886.0">
+                                 <items>
+                                    <AnchorPane fx:id="textcomboTipoProducto171" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="22.0" layoutY="5.0" text="Detalle producto" />
+                                          <Separator layoutX="13.0" layoutY="25.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <Button fx:id="btnNuevoproducto1171" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnNuevoProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Nuevo" />
+                                          <Button fx:id="btnAgregarProducto1171" layoutX="383.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnAgregarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Agregar" />
+                                          <Button fx:id="btnActualizarProducto1171" layoutX="588.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnActualizarProductoEvent" prefHeight="26.0" prefWidth="118.0" text="Actualizar" />
+                                          <Label layoutX="14.0" layoutY="174.0" text="Tipo producto" />
+                                          <ComboBox fx:id="textComboTipoProducto171" layoutX="121.0" layoutY="170.0" onAction="#combobocTipoProducto" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="13.0" layoutY="123.0" text="Nombre" />
+                                          <TextField fx:id="textProducto171" layoutX="122.0" layoutY="119.0" prefHeight="25.0" prefWidth="158.0" />
+                                          <TextField fx:id="textCodigo271" layoutX="646.0" layoutY="170.0" prefHeight="25.0" prefWidth="160.0" />
+                                          <Label layoutX="538.0" layoutY="174.0" text="Precio" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="885.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Lista de productos" />
+                                          <Separator layoutX="7.0" layoutY="28.0" prefHeight="8.0" prefWidth="817.0" />
+                                          <TableView fx:id="tableProductos171" layoutX="14.0" layoutY="43.0" prefHeight="258.0" prefWidth="857.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnCodigo1171" prefWidth="216.0" text="nombre" />
+                                                <TableColumn fx:id="columnProducto1171" prefWidth="214.0" text="Precio" />
+                                                <TableColumn fx:id="columnTipoProducto1171" prefWidth="213.0" text="Tipo producto" />
+                                                <TableColumn fx:id="columnSede1171" prefWidth="213.0" text="Estado" />
+                                             </columns>
+                                          </TableView>
+                                          <Button fx:id="btnEliminarProducto171" layoutX="355.0" layoutY="313.0" mnemonicParsing="false" onAction="#btnEliminarEvent1" prefHeight="26.0" prefWidth="118.0" text="Eliminar" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
